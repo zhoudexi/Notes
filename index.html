@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css">
+</head>
+<body>
+  <div id="app">加载中</div>
+  <script>
+    window.$docsify = {
+      loadNavbar: true,
+      coverpage: true,
+      themeColor: '#050505',
+      mergeNavbar: true,
+      externalLinkTarget: '_self',
+      cornerExternalLinkTarget: '_self',
+      onlyCover: false,
+      notFoundPage: true,
+      requestHeaders: {
+        'cache-control': 'max-age=600',
+      },
+      topMargin: 90, // default: 0
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      formatUpdated: function(time) {
+        // ...
+
+        return time;
+      },
+      search: 'auto',
+      search: {
+          maxAge: 86400000,
+          paths: '/',
+          depth      : 3,
+          // 支持本地化
+          noData: {
+            '/zh-cn/': '找不到结果',
+            '/': 'No Results'
+          },
+           // 支持本地化
+          placeholder: {
+            '/zh-cn/': '搜索',
+            '/': '搜索'
+          },
+          pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+      },
+      copyCode: {
+          buttonText : '复制代码',
+          errorText  : 'Error',
+          successText: '复制成功'
+        },
+        pagination: {
+            previousText: '上一篇',
+            nextText: '下一篇',
+            crossChapter: true,
+            crossChapterText: true,
+        },
+        count:{
+            countable:true,
+            fontsize:'0.9em',
+            color:'rgb(90,90,90)',
+            language:'chinese'
+        },
+      name: '',
+      repo: 'https://github.com/zhoudexi'
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+  <!-- emoji 解析 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 外链 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <!-- 图片缩放 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 复制代码 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 分页 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+</body>
+</html>
